@@ -9,12 +9,16 @@ import SwiftUI
 
 struct EditJournalEntryVIew: View {
     
+    
+    @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) var dismiss
+    
     @State var editingJournalEntry: JournalEntry
-    @State var editMode = false
+    @State var editMode = true
     
     
     var body: some View {
-        NavigationStack{
+       
         if editMode {
             
                 Form {
@@ -24,12 +28,18 @@ struct EditJournalEntryVIew: View {
                     Slider(value: $editingJournalEntry.rating, in: 1...5, step: 1)
                     TextEditor(text: $editingJournalEntry.text)
                 }
-                
-                Text("Edit mode")
+                .navigationTitle("Edit Mode")
                     .toolbar {
+                        Button("Delete") {
+                            modelContext.delete(editingJournalEntry)
+                            dismiss()
+                        }
+                        .foregroundStyle(.red)
+                        
                         Button("Done") {
                             editMode = false
                         }
+                        .bold()
                     }
             
             } else {
@@ -40,7 +50,7 @@ struct EditJournalEntryVIew: View {
                         }
                     }
             }
-        }
+        
     }
 }
 

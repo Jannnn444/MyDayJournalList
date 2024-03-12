@@ -9,6 +9,7 @@ import SwiftUI
 
 struct JournalEntryDetailView: View {
     
+
     let detailJournalEntry: JournalEntry    //inherited from journal entry
     
     var body: some View {
