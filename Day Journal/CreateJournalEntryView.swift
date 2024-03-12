@@ -29,15 +29,27 @@ struct CreateJournalEntryView: View {
             }
             .navigationTitle("NewJournal EntryPage")
             .toolbar {
-                Button("Save!") {
-                    let newJournalEntry = JournalEntry(title: title, text: text, rating: rating, date: date)
-                    modelContext.insert(newJournalEntry)
-                    dismiss()
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
                 }
+    
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Save") {
+                        let newJournalEntry = JournalEntry(title: title, text: text, rating: rating, date: date)
+                        modelContext.insert(newJournalEntry)
+                        dismiss()
+                    }
+                }
+            }
+            
+            
             }
         }
     }
-}
+
 
 #Preview {
     CreateJournalEntryView()

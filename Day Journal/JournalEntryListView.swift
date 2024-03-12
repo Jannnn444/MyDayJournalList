@@ -21,13 +21,14 @@ struct JournalEntryListView: View {
             // journalEntries from the journalEntry listedItems by looping
             List(journalEntries) { listedJournalEntry in
                 
-                NavigationLink(destination: JournalEntryDetailView(detailJournalEntry: listedJournalEntry)) {
+                NavigationLink(destination: EditJournalEntryVIew(editingJournalEntry: listedJournalEntry)) {
                     
                     JournalEntryRowView(rowJournalEntry: listedJournalEntry)
                 }
             }
             .navigationTitle("\(journalEntries.count) Journal Entries")
             .toolbar {
+                
                 Button(action: {
                     showCreateView = true
                 }) {

@@ -15,6 +15,7 @@
 		54BDAC7E2B9DCFB100580EC2 /* JournalEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDAC7D2B9DCFB100580EC2 /* JournalEntryDetailView.swift */; };
 		54BDAC9C2B9EFA9A00580EC2 /* JournalEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDAC9B2B9EFA9A00580EC2 /* JournalEntryRowView.swift */; };
 		54EFAB172BA06F7000BB3C22 /* CreateJournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFAB162BA06F7000BB3C22 /* CreateJournalEntryView.swift */; };
+		54EFAB192BA0AB7E00BB3C22 /* EditJournalEntryVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFAB182BA0AB7E00BB3C22 /* EditJournalEntryVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		54BDAC7D2B9DCFB100580EC2 /* JournalEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryDetailView.swift; sourceTree = "<group>"; };
 		54BDAC9B2B9EFA9A00580EC2 /* JournalEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryRowView.swift; sourceTree = "<group>"; };
 		54EFAB162BA06F7000BB3C22 /* CreateJournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalEntryView.swift; sourceTree = "<group>"; };
+		54EFAB182BA0AB7E00BB3C22 /* EditJournalEntryVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalEntryVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +62,14 @@
 			isa = PBXGroup;
 			children = (
 				54BDAC6D2B9DC1C200580EC2 /* Day_JournalApp.swift */,
-				54BDAC6F2B9DC1C200580EC2 /* JournalEntryListView.swift */,
 				54BDAC712B9DC1C400580EC2 /* Assets.xcassets */,
 				54BDAC732B9DC1C400580EC2 /* Preview Content */,
 				54BDAC7B2B9DC70900580EC2 /* JournalEntry.swift */,
+				54BDAC6F2B9DC1C200580EC2 /* JournalEntryListView.swift */,
 				54BDAC7D2B9DCFB100580EC2 /* JournalEntryDetailView.swift */,
 				54BDAC9B2B9EFA9A00580EC2 /* JournalEntryRowView.swift */,
 				54EFAB162BA06F7000BB3C22 /* CreateJournalEntryView.swift */,
+				54EFAB182BA0AB7E00BB3C22 /* EditJournalEntryVIew.swift */,
 			);
 			path = "Day Journal";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54EFAB192BA0AB7E00BB3C22 /* EditJournalEntryVIew.swift in Sources */,
 				54BDAC9C2B9EFA9A00580EC2 /* JournalEntryRowView.swift in Sources */,
 				54BDAC7C2B9DC70900580EC2 /* JournalEntry.swift in Sources */,
 				54BDAC702B9DC1C200580EC2 /* JournalEntryListView.swift in Sources */,
