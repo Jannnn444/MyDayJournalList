@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateJournalEntryView: View {
     
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) var dismiss
     
     @State var title: String = ""
     @State var text: String = ""
@@ -31,7 +32,7 @@ struct CreateJournalEntryView: View {
                 Button("Save!") {
                     let newJournalEntry = JournalEntry(title: title, text: text, rating: rating, date: date)
                     modelContext.insert(newJournalEntry)
-                    
+                    dismiss()
                 }
             }
         }
