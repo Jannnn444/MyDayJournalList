@@ -14,12 +14,13 @@ struct JournalEntryListView: View {
     @Query(sort: \JournalEntry.date, order: .reverse) private var journalEntries: [JournalEntry]
     
     @State var showCreateView = false
+    @State private var searchText = ""
 
     var body: some View {
         NavigationStack {
             
             // journalEntries from the journalEntry listedItems by looping
-            List(journalEntries) { listedJournalEntry in
+            List(searchResults) { listedJournalEntry in
                 
                 NavigationLink(destination: EditJournalEntryVIew(editingJournalEntry: listedJournalEntry)) {
                     
@@ -40,11 +41,20 @@ struct JournalEntryListView: View {
             }
             
             }
+        .searchable(text: $searchText)
         
         }
-       
-    }
     
+    var searchResults: [JournalEntry] {
+        if searchText.isEmpty {
+            return journalEntries
+        } else {
+            return journalEntries.filter { $0.title.contains(searchText) || $0.text.contains(searchText) }
+        }
+}
+
+
+
  
  
 #Preview {
